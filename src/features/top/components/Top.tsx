@@ -1,7 +1,18 @@
-import { Center } from '@chakra-ui/react';
+import { Suspense } from 'react';
+import { Center, Spinner, VStack } from '@chakra-ui/react';
+import ProductList from './ProductList';
 
 const Top = (): JSX.Element => {
-    return <Center>Top Page</Center>;
+    return (
+        <Center>
+            <VStack>
+                <Center>Top Page</Center>
+                <Suspense fallback={<Spinner color='teal' />}>
+                    <ProductList />
+                </Suspense>
+            </VStack>
+        </Center>
+    );
 };
 
 export default Top;

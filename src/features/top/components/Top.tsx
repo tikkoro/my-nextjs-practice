@@ -1,7 +1,6 @@
-import { FC } from 'react';
 import { Center } from '@chakra-ui/react';
 
-const Top: FC = () => {
+const Top = (): JSX.Element => {
     return <Center>Top Page</Center>;
 };
 

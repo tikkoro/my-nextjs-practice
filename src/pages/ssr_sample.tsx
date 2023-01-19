@@ -22,6 +22,8 @@ export default SSR;
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
     const API_URL_ROOT = 'https://fakestoreapi.com/products';
+    // This is not working behind proxy.
+    // await fetch(API_URL_ROOT);
     const res = await axios.get(API_URL_ROOT);
     const posts = res.data as Product[];
     console.log(posts);

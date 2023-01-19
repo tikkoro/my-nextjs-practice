@@ -5,7 +5,7 @@ import Providers from '@/Providers';
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
         <Providers>
-            <Component {...pageProps} />;
+            <Component {...pageProps} />
         </Providers>
     );
 };

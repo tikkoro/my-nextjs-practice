@@ -1,7 +1,7 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 
-const Providers: FC<PropsWithChildren> = ({ children }) => (
+const Providers = ({ children }: PropsWithChildren): JSX.Element => (
     <ChakraProvider>{children}</ChakraProvider>
 );
 

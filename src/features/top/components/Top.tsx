@@ -7,7 +7,15 @@ const Top = (): JSX.Element => {
         <Center>
             <VStack>
                 <Center>Top Page</Center>
-                <Suspense fallback={<Spinner color='teal' />}>
+                <Suspense
+                    fallback={
+                        <>
+                            <Spinner color='teal' />
+                            {/* prevent scrollbars from appering */}
+                            <div />
+                        </>
+                    }
+                >
                     <ProductList />
                 </Suspense>
             </VStack>
